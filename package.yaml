@@ -1,0 +1,21 @@
+name:                dual
+version:             0.1.0.0
+#synopsis:
+#description:
+github:              "laserpants/powerpants"
+homepage:            https://github.com/laserpants/dual#readme
+license:             BSD3
+author:              "laserpants"
+maintainer:          "hildenjohannes@gmail.com"
+copyright:           "2018 Johannes Hildén"
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+
+executables:
+  dual:
+    source-dirs:      src
+    main:             Main.hs
