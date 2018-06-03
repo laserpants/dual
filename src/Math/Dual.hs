@@ -9,7 +9,7 @@ import NumericPrelude.Base
 
 data Dual a = a :+ a deriving (Show, Eq)
 
-infixl 7 :+
+infixl 8 :+
 
 instance Algebra.Ring.C a => Algebra.Additive.C (Dual a) where
     (x :+ a) + (y :+ b) = (x + y) :+ (a + b)
@@ -17,5 +17,5 @@ instance Algebra.Ring.C a => Algebra.Additive.C (Dual a) where
     negate (x :+ a)     = negate x :+ negate a
 
 instance Algebra.Ring.C a => Algebra.Ring.C (Dual a) where
-    (x :+ a) * (y :+ b) = x*y :+ (x*b + a*y)
+    (x :+ a) * (y :+ b) = (x*y) :+ (x*b + a*y)
     fromInteger a       = fromInteger a :+ 0
